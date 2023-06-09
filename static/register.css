@@ -1,0 +1,30 @@
+body{
+    margin:0px;
+    background-image: url("https://th.bing.com/th/id/OIP.lvmndqMJfRgZecw0Coo6lgHaEw?w=293&h=189&c=7&r=0&o=5&dpr=1.5&pid=1.7");
+}
+
+form{
+    margin-top:50px;
+    border:1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+}
+
+input:NOT([type="submit"]){
+    width:300px;
+    height:50px;
+    background-color:whitesmoke;
+}
+input:hover{
+    background-color: aquamarine;
+}
+.submit{
+    color:darkslategrey;
+    width:200px;
+    height:50px;
+    background-color:lavender;
+}

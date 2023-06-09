@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IPL Data</title>
+</head>
+<body>
+    {% include "home.html" %}
+    <div class="content">
+    <h1>IPL Data</h1>
+    <p>{{ output }}</p>
+
+    <h2>Venue Count Plot</h2>
+    <img src="{% static 'venue_countplot.png' %}" alt="Venue Count Plot">
+
+    <h2>Toss Decision Count Plot</h2>
+    <img src="{% static 'toss.png' %}" alt="Toss Decision Count Plot">
+    </div>
+</body>
+</html>

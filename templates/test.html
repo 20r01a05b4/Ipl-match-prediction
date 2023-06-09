@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IPL Data</title>
+    <link rel="stylesheet" href="{% static 'test.css' %}">
+</head>
+<body>
+    {% include "home.html" %}
+  
+    <div class="content">
+    <form action="{% url 'test' %}" method="post" class="form">
+        {% csrf_token%}
+           <br/>
+            {% for i in columns %}
+            <br/>
+            <input type="text" name={{i}} requried placeholder={{i}}{{"*"}}>
+              
+            <br/>
+            {% endfor %}
+       
+            <input type="submit" class="submit"/><br/> <br/>
+           
+    </form>
+    </div>
+</body>
+</html>

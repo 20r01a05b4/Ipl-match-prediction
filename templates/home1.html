@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>home1 html</title>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <style>
+     
+      nav.navbar {
+        background-color:;
+      }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: black;
+}
+
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+
+
+.hero {
+  background-image: url("https://th.bing.com/th/id/OIP.lvmndqMJfRgZecw0Coo6lgHaEw?w=293&h=189&c=7&r=0&o=5&dpr=1.5&pid=1.7");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff4500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* About section styles */
+.about {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.about h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 16px;
+}
+
+.how-to-predict {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+}
+
+.how-to-predict h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.how-to-predict ol {
+  padding-left: 20px;
+}
+
+.how-to-predict ol li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  color: #fff;
+  font-size: 14px;
+}
+.content{
+  margin-top:50px;
+}
+
+    </style>
+
+    
+  </head>
+<body>
+   
+    {% include 'home.html'%}
+  <div class="content">
+    <section class="hero">
+      <div class="container">
+          <h1>Welcome to IPL Match Prediction</h1>
+          <p>Predict who going to win</p>
+          {% if user.is_authenticated%}
+          <a href="/test" class="btn">Predict</a>
+          {% else%}
+          <a href="/register" class="btn">Predict</a>
+          {% endif %}
+
+      </div>
+  </section>
+  
+  <section class="about">
+      <div class="container">
+          <h2>About IPL Match Prediction</h2>
+          <p></p>
+      </div>
+  </section>
+  
+  <section class="how-to-predict">
+      <div class="container">
+          <h2>How to Predict</h2>
+          <ol>
+              <li>Create an account or login to your existing account</li>
+              <li>Select the upcoming match you want to predict</li>
+              <li>Predict the winning team and other match details</li>
+              <li>Submit your prediction and wait for the match result</li>
+              <li>Earn points and climb up the leaderboard</li>
+          </ol>
+      </div>
+  </section>
+  
+  <footer>
+      <p>&copy; 2023 IPL Match Prediction. All rights reserved.</p>
+  </footer>
+
+<div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.content {
+    margin-top: 27px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-image: url("https://www.bing.com/th?id=OIP.IGAze9Gxnh32gQ1Bmkb-nwHaEK&w=202&h=106&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2");
+}
+
+.form {
+    background-color: antiquewhite;
+    margin-top: 34px;
+    padding: 5px 65px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 150vh;
+    width: 80vh;
+}
+
+input:not([type="submit"]) {
+    height: 80px;
+    width: 380px;
+    font-size: 30px;
+}
+
+.submit {
+    width: 100px;
+    height: 40px;
+    background-color:aquamarine;
+    font-size: 22px;
+}

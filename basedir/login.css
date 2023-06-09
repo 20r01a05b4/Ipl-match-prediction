@@ -1,0 +1,33 @@
+body{
+   margin:5px;
+   text-align: center;
+   align-content: center;
+}
+form{
+    border:1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+    
+}
+input:not([type="submit"]){
+    height:50px;
+    width:320px;
+    border-radius:3px solid;
+    
+}
+input:hover{
+    background-color: aquamarine;
+    transition: 1s ease;
+}
+.temp{
+  background-image: url("https://images.pexels.com/photos/7599717/pexels-photo-7599717.jpeg?auto=compress&cs=tinysrgb&w=1600");
+}
+#submit{
+    background-color:aquamarine;
+    width:120px;
+    height:50px;
+}

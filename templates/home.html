@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>home1 html</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'home1.js' %}"></script>
+   
+    <style>
+      nav.navbar {
+        background-color: dimgrey;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999; 
+        margin-bottom:5px;
+      }
+      nav {
+        padding-left: 20px;
+        poasition:fixed;
+      }
+      .navbar-nav > li {
+        margin-right: 70px;
+      }
+      .navbar-nav > li > a {
+        font-size: 18px;
+        color: gray; 
+      }
+      #navi li:hover {
+        
+        color: red;
+      }
+      .logout{
+        position:relative;
+        left:480px;
+      }
+      .contact{
+        position:relative;
+        left:0px;
+      }
+      .test{
+        position:relative;
+        bottom:3px;
+        margin-left:170px;
+      }
+    </style>
+    
+  </head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" style="color: black" href="/">Home</a>
+      </div>
+      
+     
+<ul class="nav navbar-nav" id="navi">
+        {% if  user.is_authenticated %}
+ 
+  <li><a href="{% url 'test' %}" style="color: black;" class="test" >Test</a></li>
+<li><a href="{% url 'logout' %}" style="color: black;" class="logout">Logout</a></li>
+        {% else %}
+        <li><a href="/login" style="color: black;">Login</a></li>
+        
+        
+<li><a href="/register" style="color: black;">Register</a></li>
+        {% endif %}
+        <li><a href="#" style="color: black;" class="contact">Contact Us</a></li>
+      </ul>
+    </div>
+  
+ 
+</nav>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+</body>
+</html>
